@@ -1,11 +1,18 @@
 import React from 'react'
+import { Map as LeafletMap, TileLayer} from 'leaflet'
 
-function Map() {
+function MapBox() {
     return (
-        <div className="map">
-            <h1>I am a Map</h1>
+        <div className="map__box">
+            <LeafletMap>
+            <TileLayer 
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution='&copy; <a href="http://osm.org/copyright"> OpenStreetMap</a> Contributors'
+            
+            />
+            </LeafletMap>
         </div>
     )
 }
 
-export default Map
+export default MapBox
